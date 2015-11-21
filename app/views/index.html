@@ -5,6 +5,13 @@
 	</head>
 	<body>
 		<h1>{{ title }}</h1>
-		<img src="img/img1.jpg" alt="Rendered Image">
+		<!--<img src="img/img1.jpg" alt="Rendered Image">-->
+		{% if user %}
+			<h2>Hello {{ user }}</h2>
+			<a href="/logout">Logout</a>
+		{% else %}
+			<a href="/register">Register</a>
+			<a href="/login">Login</a>
+		{% endif %}
 	</body>
 </html>

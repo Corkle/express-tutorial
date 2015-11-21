@@ -6,7 +6,7 @@ var config = require('./config/config'),
 	passport = require('./config/passport');
 	
 var db = mongoose(),
-	app = express()
+	app = express(),
 	passport = passport();
 
 app.listen(config.port);
