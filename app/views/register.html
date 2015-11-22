@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>
-        {{ title }}
-    </title>
-
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
-</head>
-<body>
+{% extends 'index.html' %}
+{% block content %}
    {% for flash in messages %}
         <div class="flash">
             {{ flash }}
@@ -40,5 +31,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}

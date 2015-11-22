@@ -131,7 +131,10 @@ exports.list = function (req, res, next) {
 			return next(err);
 		}
 		else {
-			res.json(users);
+			res.render('users', {
+			title: 'User List',
+			users: users
+		});
 		}
 	});
 };
