@@ -2,11 +2,11 @@ var users = require('../controllers/users.server.controller'),
 	passport = require('passport');
 
 module.exports = function(app) {
-	app.route('/users')
+	app.route('/listusers')
 	.post(users.create)
 	.get(users.list);
 	
-	app.route('/users/:userId')
+	app.route('/listusers/:userId')
 		.get(users.read)
 		.put(users.update)
 		.delete(users.delete);

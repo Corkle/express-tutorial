@@ -4,13 +4,13 @@ module.exports = {
 	port: port,
 	db: 'mongodb://localhost/todos',
 	facebook: {
-		clientID: '',
-		clientSecret: '',
+		clientID: 'App ID',
+		clientSecret: 'App Secret',
 		callbackURL: 'http://localhost:' + port + '/oauth/facebook/callback'
 	},
 	twitter: {
-		clientID: '',
-		clientSecret: '',
+		clientID: 'API Key',
+		clientSecret: 'API Secret',
 		callbackURL: 'http://localhost:' + port + '/oauth/twitter/callback'
 	}
 }

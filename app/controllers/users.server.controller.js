@@ -71,7 +71,8 @@ exports.register = function (req, res, next) {
 			req.login(user, function (err) {
 				if (err)
 					return next(err);
-
+				
+				console.log(user.username + ' logged in');
 				return res.redirect('/');
 			});
 		});
@@ -82,6 +83,7 @@ exports.register = function (req, res, next) {
 };
 
 exports.logout = function (req, res) {
+	console.log(req.user.username + ' logged out');
 	req.logout();
 	res.redirect('/');
 };

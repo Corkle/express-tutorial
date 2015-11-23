@@ -5,21 +5,37 @@
 	<title>{{ title }}</title>
 	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+	<base href="/">
 </head>
-<body>
-	<section ng-view></section>
 
-	{% block content %}
-	{% endblock %}
+<body>
+	{% block content %} {% endblock %}
+	
+	<section ng-view></section>
+	
+	<script type="text/javascript">
+		window.user = {{ user|raw|default('null') }};
+	</script>
+
+	
 
 </body>
 <script type="text/javascript" src="/js/angular/angular.js"></script>
-<script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/js/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="/js/angular-resource/angular-resource.min.js"></script>
+
+<script type="text/javascript" src="/todos/todos.client.module.js"></script>
+<script type="text/javascript" src="/todos/controllers/todos.client.controller.js"></script>
+<script type="text/javascript" src="/todos/services/todos.client.service.js"></script>
+<script type="text/javascript" src="/todos/config/todos.client.routes.js"></script>
 
 <script type="text/javascript" src="/users/users.client.module.js"></script>
 <script type="text/javascript" src="/users/services/authentication.client.service.js"></script>
 
-<script type="text/javascript" src="application.js"></script>
 <script type="text/javascript" src="/example/example.client.module.js"></script>
 <script type="text/javascript" src="/example/config/example.client.routes.js"></script>
+<script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>
+
+<script type="text/javascript" src="/application.js"></script>
+
 </html>
